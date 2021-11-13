@@ -1,13 +1,13 @@
 ﻿using System.Diagnostics;
-using ConfReaderLib;
+using ConfigReadingLib;
 
 // Chrome Icon  Artist: firstfear(firstfear.deviantart.com)
 
 try
 {
-    var conf = new ConfReader(new[] { "program path", "instance path" }, "Path.txt");
-    var programpath = conf.GetConf("program path");
-    var instancepath = conf.GetConf("instance path");
+    var reader = new ConfigReader("Path.txt");
+    var programpath = reader.GetValue("program path");
+    var instancepath = reader.GetValue("instance path");
     Process.Start(programpath, $"--user-data-dir=\"{instancepath}\"");
 }
 catch { }
