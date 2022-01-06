@@ -1,2 +1,7 @@
-﻿program path = C:\Program Files\Google\Chrome\Application\chrome.exe // Chrome's path
-instance path = E:\Chrome Instance // Instance path
+﻿# chrome's path
+[program]
+program path: C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe
+
+# instance's path
+[instance]
+instance path: E:\\Chrome Instance 
